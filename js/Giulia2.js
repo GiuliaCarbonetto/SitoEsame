@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   background(200); // Sfondo grigio
   stroke(0); // Colore delle linee nero
   strokeWeight(2); // Spessore delle linee
@@ -9,7 +9,7 @@ function setup() {
   
   for (let i = 0; i < numLines; i++) {
     let x = i * lineWidth + lineWidth / 2;
-    let startY = 50; // Y iniziale
+    let startY = 10; // Y iniziale
     let endY = startY + random(200, 500); // Y finale casuale
     
     line(x, startY, x, endY);

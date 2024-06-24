@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   noLoop();
 }
 
@@ -7,7 +7,7 @@ function draw() {
   background(255); // Sfondo bianco
   
   let colors = [50, 150, 200]; // Scala di grigi
-  let gridSize = 12; // Dimensione della griglia
+  let gridSize = 24; // Dimensione della griglia
 
   for (let y = 0; y < height; y += gridSize) {
     for (let x = 0; x < width; x += gridSize) {
