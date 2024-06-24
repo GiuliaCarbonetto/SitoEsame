@@ -1,27 +1,31 @@
+let rez = 0.02;
+let t = 0;
+
 function setup() {
-    createCanvas(windowWidth, windowHeight);
-    background (300,200,0) }
-    let x = 0;
-    let y = 0;
-    let size = 30;
-    
+  createCanvas(windowWidth,windowWidth);
   
-  function draw() {
-     strokeWeight(19);
-    
-    if(random(2) < 1){
-      
-      line(x,y, x+size, y+size, y);
-      
-    } else {
-      
-      line (x, y+size, x+size, y)
-    } 
-    
-    x += size;
-    
-    if(x> width) {
-      x= 0;
-      y += size
+  noLoop();
+}
+
+function draw() {
+  background(255);
+  space = 10;
+  size = 30;
+
+  for (i = 0; i < width; i += space) {
+    for (j = 0; j < height; j += space) {
+      n = noise(i * rez, j * rez, t);
+      //n = random(1);
+      //stroke(n*255,n*255,n*255,255);
+      stroke(0);
+      //fill(n*255,n*255,n*255,255);
+      strokeWeight(3);
+      if (n < 0.5) {
+        line(i, j, i + size, j + size);
+      } else {
+        line(i + size, j, i, j + size);
+      }
     }
+    t += 0.00002;
   }
+}
