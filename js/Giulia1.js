@@ -5,7 +5,7 @@ let continueDrawing = true;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(0);
+  background(156, 30, 60);
 }
 
 function draw() {
@@ -34,11 +34,11 @@ function draw() {
 function drawShape(x, y) {
   // Disegna un cerchio o un rettangolo
   strokeWeight(5);
-  fill(115, 220, 20);
-  stroke(200, 30, 60);
+  fill(156, 30, 60);
+  stroke(15, 30, 60);
 
   if (random(1) < 0.5) {
-    circle(x + spacing / 2, y + spacing / 2, spacing); // Posiziona il cerchio al centro del rettangolo
+    rect(x + spacing / 2, y + spacing / 2, spacing); // Posiziona il cerchio al centro del rettangolo
   } else {
     rect(x, y, spacing, spacing);
   }
