@@ -27,8 +27,8 @@ function draw() {
   line(centerX + rectWidth, centerY - rectHeight, centerX + rectWidth, windowHeight); // Linea verticale destra
 
   // Linee ai bordi
-  line(0, 0, 0, windowHeight); // Bordo sinistro
-  line(windowWidth, 0, windowWidth, windowHeight); // Bordo destro
-  line(0, 0, windowWidth, 0); // Bordo superiore
-  line(0, windowHeight, windowWidth, windowHeight); // Bordo inferiore
+  line(0, 0, 0, windowHeight); 
+  line(windowWidth, 0, windowWidth, windowHeight); 
+  line(0, 0, windowWidth, 0);
+  line(0, windowHeight, windowWidth, windowHeight); 
 }
